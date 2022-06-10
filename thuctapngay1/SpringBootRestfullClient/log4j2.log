@@ -1,0 +1,2 @@
+15:05:15.652 [main] INFO  - This is an INFO level log message!
+15:05:15.658 [main] ERROR - This is an ERROR level log message!

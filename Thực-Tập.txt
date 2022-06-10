@@ -1,0 +1,12 @@
+* jdbc và connect:
+	+ Mở kết nối jdbc xong phải đóng lại - Giới hạn số lượng người truy cập để tránh lãng phí tài nguyên,Kết nối cơ sở dữ liệu chiếm một lượng tài nguyên, cả bên trong ứng dụng của riêng bạn, nhưng đặc biệt là trên máy chủ cơ sở dữ liệu. Do đó, việc giữ cho các kết nối cơ sở dữ liệu mở mà không được sử dụng sẽ yêu cầu cơ sở dữ liệu giữ các tài nguyên không cần thiết được phân bổ cho kết nối.
+	+ http://tutorials.jenkov.com/jdbc/connection.html
+	+ http://tutorials.jenkov.com/jdbc/transaction.html
+
+* jdbc connect pool:
+	+ Mục đích chính là giảm thiểu sử dụng tài nguyên của ứng dụng cho việc thực hiện các kết nối và các hoạt động đọc/ghi đến cơ sở dữ liệu.
+	+ Connection pooling cho phép tạo và duy trì một tập các kết nối (connection) dùng chung nhằm tăng hiệu suất cho các ứng dụng bằng cách sử dụng lại các kết nối khi có yêu cầu xử lý dữ liệu đến database thay vì việc tạo kết nối mới. Vùng chứa các connection này gọi là Pool.
+	+ HikariCP là một trong những thư viện hỗ trợ connection pooling nổi tiếng nhất với đặc tính gọn nhẹ (khoảng 130kb) và cho hiệu năng tốt hơn hẵn so với các thư viện khác như Tomcat, DBCP2 và C3P0
+
+* Autocomit():
+ Được sử dụng để thiết lập chế độ cam kết kết nối cơ sở dữ liệu. Nếu đó là chế độ tự động, thực hiện tất cả các câu lệnh SQL và được cam kết như một giao dịch duy nhất, nếu không câu lệnh SQL được tập hợp vào giao dịch cho đến khi bạn gọi phương pháp commit hoặc phương pháp rollback. Kết nối mới được tạo thành chế độ gửi tự động theo mặc định.

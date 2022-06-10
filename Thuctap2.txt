@@ -1,0 +1,1 @@
+tạo 1 vòng for áp dụng lệnh sleep và lệnh anh dũng gửi để có thể xem số lượng connect

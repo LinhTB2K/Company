@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level - %msg%n"/>
+        </Console>
+        <File name="File" fileName="log4j2.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level - %msg%n"/>
+        </Console>
+        <File name="File1" fileName="DeleteExample2.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level - %msg%n"/>
+        </Console>
+        <File name="File2" fileName="GetPOJOWithHeaderExample.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level - %msg%n"/>
+        </Console>
+        <File name="File3" fileName="Post_postForObject_Example.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level - %msg%n"/>
+        </Console>
+        <File name="File4" fileName="PutWithExchangeExample.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+<!--        <Root level="error">-->
+<!--            <AppenderRef ref="File1"/>-->
+<!--        </Root>-->
+        <Logger name = "com.example.springbootrestfullclient.control" level="debug" additivity="true">
+            <AppenderRef ref="File"/>
+        </Logger>
+        <Logger name = "com.example.springbootrestfullclient.del" level="error" additivity="true">
+            <AppenderRef ref="File1"/>
+        </Logger>
+        <Logger name = "com.example.springbootrestfullclient.get" level="debug" additivity="true">
+            <AppenderRef ref="File2"/>
+        </Logger>
+        <Logger name = "com.example.springbootrestfullclient.post" level="debug" additivity="true">
+            <AppenderRef ref="File3"/>
+        </Logger>
+        <Logger name = "com.example.springbootrestfullclient.put" level="debug" additivity="true">
+            <AppenderRef ref="File4"/>
+        </Logger>
+    </Loggers>
+
+</Configuration>
